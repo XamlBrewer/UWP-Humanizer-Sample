@@ -3,8 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:dc="using:DeanChalk.UWP.TimePicker"
       mc:Ignorable="d"
-      Foreground="{StaticResource PageForegroundBrush}">
+      Foreground="{StaticResource PageForegroundBrush}"
+      FontFamily="Segoe UI">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -12,7 +14,6 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
@@ -40,18 +41,45 @@
         <Image VerticalAlignment="Bottom"
                HorizontalAlignment="Right"
                Stretch="UniformToFill"
-               Source="ms-appx:///Assets/MortySanchez.png"
+               Source="ms-appx:///Assets/RickSanchez.png"
                Grid.Row="1"
                Grid.Column="0"
                Grid.ColumnSpan="2" />
 
         <!-- Content -->
         <Grid VerticalAlignment="Center"
-              HorizontalAlignment="Center"
+              HorizontalAlignment="Left"
               Grid.Row="1"
               Grid.Column="0">
-            <TextBlock Text="Patience, please. Here comes a playground."
-                       FontFamily="Segoe UI" />
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <DatePicker Date="{x:Bind SelectedDate, Mode=TwoWay}"
+                        Background="{StaticResource PageBackgroundBrush}"
+                        Foreground="{StaticResource PageForegroundBrush}"
+                        FontFamily="Segoe UI"
+                        BorderThickness="0" Margin="20"/>
+            <dc:TimePicker Time="{x:Bind SelectedTime, Mode=TwoWay}"
+                           UnSelectedBackgroundBrush="{StaticResource PageBackgroundBrush}"
+                           UnSelectedForegroundBrush="{StaticResource PageForegroundBrush}"
+                           SelectedBackgroundBrush="{StaticResource PageForegroundBrush}"
+                           SelectedForegroundBrush="{StaticResource PageBackgroundBrush}"
+                           BorderThickness="0" Margin="20"
+                           Grid.Row="1"
+                           FontFamily="Segoe UI" />
+            <TextBlock FontSize="24"
+                       Margin="20"
+                       Grid.Row="1"
+                       Grid.Column="1">
+                <Run Text="{x:Bind SelectedDateTime, Mode=OneWay}" />
+                <LineBreak />
+                <Run Text="{x:Bind HumanizedDateTime, Mode=OneWay}" />
+            </TextBlock>
         </Grid>
 
     </Grid>

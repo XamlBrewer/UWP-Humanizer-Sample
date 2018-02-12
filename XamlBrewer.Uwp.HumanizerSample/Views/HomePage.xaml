@@ -43,6 +43,12 @@
             <Run>This app shows some features of the Humanizer Nuget Package:</Run>
         </TextBlock>
 
+        <!-- Morty -->
+        <Image Grid.Row="2"
+               VerticalAlignment="Bottom"
+               Height="300"
+               Source="ms-appx:///Assets/MortySmith.png" />
+
         <!-- List -->
         <ListView ItemsSource="{x:Bind Expressions}"
                   Grid.Row="2"
