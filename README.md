@@ -11,5 +11,8 @@ This UWP app shows some features of the Humanizer Nuget Package on https://githu
 * Transforming number to ordinal words
 * Transforming to and from Roman numerals
 
+![HomePage](Assets/Humanizer_HomePage.png?raw=true "HomePage")
 
 The main page contains an instance of Dean Chalk's Radial TimePicker for UWP at https://github.com/deanchalk/UWPTimePicker:
+![MainPage](Assets/Humanizer_MainPage.png?raw=true "HomePage")
+
