@@ -13,8 +13,6 @@ namespace XamlBrewer.Uwp.HumanizerSample
             this.InitializeComponent();
         }
 
-
-
         //// private List<KeyValuePair<String, String>> Expressions => new List<KeyValuePair<string, string>>
         private List<KeyValuePairOfStrings> Expressions => new List<KeyValuePairOfStrings>
         {
