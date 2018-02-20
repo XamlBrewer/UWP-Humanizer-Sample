@@ -45,7 +45,10 @@
 
         <!-- Morty -->
         <Image Grid.Row="2"
+               Margin="0,120,0,0"
                VerticalAlignment="Bottom"
+               HorizontalAlignment="Center"
+               Stretch="Uniform"
                Height="300"
                Source="ms-appx:///Assets/MortySmith.png" />
 
